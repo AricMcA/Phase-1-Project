@@ -1,0 +1,12 @@
+img {
+    max-height: 250px;
+}
+
+hr {
+    border: 7px solid #00bcd4;
+}
+
+#form, #hottakes {
+    max-width: 1250px;
+    margin:auto;
+}

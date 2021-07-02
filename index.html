@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="cyan lighten-5">
+    <nav>
+        <div class="nav-wrapper cyan">
+          <a href="#" class="brand-logo center">NFL Sports Talk</a>
+        </div>
+      </nav>
+    <blockquote>
+        <h2>The Game's Elite</h2>
+        <h3>Who is better?</h3>
+    </blockquote>
+    <div id="container">
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/burrow.jpg" alt="joe burrow" class='image'>
+                <h3>Joe Burrow</h3>
+                <button type="button" onclick="voteCounter('burrow')" class="btn-floating btn-large waves-effect waves-light amber darken-4">vote</button>
+                <span id="burrow" >0</span>
+            </div>
+            <div class="col s6">
+                <img src="images/herbert.png" alt="justin herbert" class='image'>
+                <h3>Justin Herbert</h3>
+                <button type="button" onclick="voteCounter('herbert')" class="btn-floating btn-large waves-effect waves-light blue">vote</button>
+                <span id="herbert">0</span>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/cmc.jpeg" alt="christian mccaffrey" class='image'>
+                <h3>Christian McCaffrey</h3>
+                <button type="button" onclick="voteCounter('mccaffrey')" class="btn-floating btn-large waves-effect waves-light blue">vote</button>
+                <span id="mccaffrey">0</span>
+            </div>
+            <div class="col s6">
+                <img src="images/derrick henry.jpg" alt="derrick henry" class='image'>
+                <h3>Derrick Henry</h3>
+                <button type="button" onclick="voteCounter('henry')" class="btn-floating btn-large waves-effect waves-light blue darken-4">vote</button>
+                <span id="henry">0</span>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/dhop.jpeg" alt="deandre hopkins" class='image'>
+                <h3>Deandre Hopkins</h3>
+                <button type="button" onclick="voteCounter('dhop')" class="btn-floating btn-large waves-effect waves-light red accent-4">vote</button>
+                <span id="dhop">0</span>
+            </div>
+            <div class="col s6">
+                <img src="images/davante.jpeg" alt="davante adams" class='image'>
+                <h3>Davante Adams</h3>
+                <button type="button" onclick="voteCounter('adams')" class="btn-floating btn-large waves-effect waves-light green darken-4">vote</button>
+                <span id="adams">0</span>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/roquan.jpeg" alt="roquan smith" class='image'>
+                <h3>Roquan Smith</h3>
+                <button type="button" onclick="voteCounter('roquan')" class="btn-floating btn-large waves-effect waves-light blue darken-4">vote</button>
+                <span id="roquan">0</span>
+            </div>
+            <div class="col s6">
+                <img src="images/bobby wagner.jpeg" alt="bobby wagner" class='image'>
+                <h3>Bobby Wagner</h3>
+                <button type="button" onclick="voteCounter('wagner')" class="btn-floating btn-large waves-effect waves-light light-green accent-2">vote</button>
+                <span id="wagner">0</span>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/jalen.png" alt="jalen ramsey" class='image'>
+                <h3>Jalen Ramsey</h3>
+                <button type="button" onclick="voteCounter('jalen')" class="btn-floating btn-large waves-effect waves-light indigo accent-4">vote</button>
+                <span id="jalen">0</span>
+            </div>
+            <div class="col s6">
+                <img src="images/jaire.jpeg" alt="jaire alexander" class='image'>
+                <h3>Jaire Alexander</h3>
+                <button type="button" onclick="voteCounter('jaire')" class="btn-floating btn-large waves-effect waves-light green darken-4">vote</button>
+                <span id="jaire">0</span>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col s6">
+                <img src="images/bates.jpeg" alt="jessie bates" class='image'>
+                <h3>Jessie Bates III</h3>
+                <button type="button" onclick="voteCounter('bates')" class="btn-floating btn-large waves-effect waves-light amber darken-4">vote</button>
+                <span id="bates">0</span>
+
+            </div>
+            <div class="col s6">
+                <img src="images/minkah.jpeg" alt="minkah fitzpatrick" class='image'>
+                <h3>Minkah Fitzpatrick</h3>
+                <button type="button" onclick="voteCounter('minkah')" class="btn-floating btn-large waves-effect waves-light yellow accent-3">vote</button>
+                <span id="minkah">0</span>
+            </div>
+        </div>
+    </div>
+    <!-- HTML responsible for creating hot takes -->
+    <nav>
+        <div class="nav-wrapper cyan">
+          <a href="#" class="brand-logo center">Create a Hot Take</a>
+        </div>
+    </nav>
+    <br>
+    <form id="form">
+        <div>
+            <label for="user">User: </label>
+            <input type="text" name="user" id="user">
+        </div>
+        <br>
+        <div>
+            <label for="player">Player: </label>
+            <input type="text" name="player" id="player">
+        </div>
+        <br>
+        <div>
+            <label for="content">Hot Take: </label>
+            <br>
+            <input name="content" id="content" cols="30" rows="10"></input>
+        </div>
+        <button class="btn waves-effect waves-light cyan" type="submit" name="action">release HOT TAKE
+            <i class="material-icons">whatshot</i>
+        </button>        
+    </form>
+    <br>
+    <nav>
+        <div class="nav-wrapper cyan">
+          <a href="#" class="brand-logo center">Hot Takes</a>
+        </div>
+    </nav>
+    <div id='hottakes'>
+    </div>
+    <script src='javascripts/index.js'></script>
+</body>
+
+</html>
