@@ -53,18 +53,24 @@ const displayTake = take => {
     const pPlayer = document.createElement('p');
     const pContent = document.createElement('p');
     const hr = document.createElement('hr');
+    const deleteBtn = document.createElement('button')
 
     h3.innerText = take.user;
     pPlayer.innerText = take.player;
     pContent.innerText = take.content;
+    deleteBtn.innerText = 'delete'
 
     div.appendChild(h3);
     div.appendChild(pPlayer);
     div.appendChild(pContent);
+    div.appendChild(deleteBtn)
 
     takesDiv().appendChild(div);
     takesDiv().appendChild(hr);
+    
+    deleteBtn.addEventListener('click' , (event) => {div.remove()})
 }
+
 
 // DOMContentLoaded tells the webpage to wait until the content of the DOM is loaded 
 // before initializing the functions that are inside the function
