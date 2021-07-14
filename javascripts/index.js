@@ -67,8 +67,13 @@ const displayTake = take => {
 
     takesDiv().appendChild(div);
     takesDiv().appendChild(hr);
-    
-    deleteBtn.addEventListener('click' , (event) => {div.remove()})
+    // 
+    deleteBtn.addEventListener('click' , (event) => {
+        div.remove()
+        fetch(`http://localhost:3000/takes/${take.id}`, {
+        method: 'DELETE'
+    })
+    })
 }
 
 
@@ -86,3 +91,7 @@ function voteCounter(id) {
    document.getElementById(id).innerHTML = ++click
 }
 
+document.querySelector('h2').addEventListener('click' , event => {
+    console.log(event)
+    event.target.innerText = `${event.target.innerText}!`
+})
